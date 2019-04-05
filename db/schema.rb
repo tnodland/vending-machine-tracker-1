@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20190405160545) do
 
   create_table "snacks", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.money "price", scale: 2
   end
 
   add_foreign_key "machine_snacks", "machines"
